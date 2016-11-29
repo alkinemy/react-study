@@ -2,6 +2,17 @@ import React from 'react';
 import CheckList from './CheckList';
 import marked from 'marked';
 
+let titlePropType = (props, propName, componentName) => {
+    if (props[propName]) {
+        let value = props[propName];
+        if (typeof value !== 'string' || value.length > 80) {
+            return new Error(
+                '${propName} in ${componentName} is longer than 80 characters'
+            );
+        }
+    }
+};
+
 
 class Card extends React.Component {
     constructor() {
@@ -53,7 +64,7 @@ class Card extends React.Component {
 
 Card.propTypes = {
     id: React.PropTypes.number,
-    title: React.PropTypes.string,
+    title: titlePropType,
     description: React.PropTypes.string,
     color: React.PropTypes.string,
     tasks: React.PropTypes.arrayOf(React.PropTypes.object)

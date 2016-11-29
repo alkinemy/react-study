@@ -1,5 +1,6 @@
 import React from 'react';
-import KanbanBoard from './KanbanBoard';
+//import KanbanBoard from './KanbanBoard';
+import KanbanBoardContainer from './KanbanBoardContainer'
 
 let cardsList = [
     {
@@ -39,7 +40,8 @@ let cardsList = [
 class App extends React.Component {
 	render(){
 		return (
-		    <KanbanBoard cards={cardsList} />
+		    // <KanbanBoard cards={cardsList} />
+            <KanbanBoardContainer />
 		);
 	}
 }
