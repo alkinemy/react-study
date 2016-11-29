@@ -11,6 +11,7 @@ class List extends React.Component {
                         description={card.description}
                         color={card.color}
                         tasks={card.tasks}
+                        taskCallbacks={this.props.taskCallbacks}
                     />
         });
 
@@ -25,7 +26,8 @@ class List extends React.Component {
 
 List.propTypes = {
     title: React.PropTypes.string.isRequired,
-    cards: React.PropTypes.arrayOf(React.PropTypes.object)
+    cards: React.PropTypes.arrayOf(React.PropTypes.object),
+    taskCallbacks: React.PropTypes.object
 };
 
 

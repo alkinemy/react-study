@@ -6,7 +6,7 @@ import 'whatwg-fetch';
 const API_URL = 'http://kanbanapi.pro-react.com';
 const API_HEADERS = {
     'Content-Type': 'application/json',
-    Authorization: 'any-string-you-like'
+    Authorization: 'mercay_react_study'
 };
 
 
@@ -30,8 +30,30 @@ class KanbanBoardContainer extends React.Component {
             });
     }
 
+    addTask(cardId, taskName) {
+
+    }
+
+    deleteTask(cardId, taskId, taskIndex) {
+
+    }
+
+    toggleTask(cardId, taskId, taskIndex) {
+
+    }
+
     render() {
-        return <KanbanBoard cards={this.state.cards} />
+        return (
+            <KanbanBoard cards={this.state.cards}
+                         taskCallbacks={
+                             {
+                                 toggle: this.toggleTask.bind(this),
+                                 delete: this.deleteTask.bind(this),
+                                 add: this.addTask.bind(this)
+                             }
+                         }
+            />
+        )
     }
 }
 
