@@ -4,9 +4,9 @@ import React from 'react';
 class CheckList extends React.Component {
     render() {
         let tasks = this.props.tasks.map((task) => (
-            <li className="checklist_task">
+            <li key={task.id} className="checklist_task">
                 <input type="checkbox" defaultChecked={task.done} />
-                {task.name}
+                {task.name}{' '}
                 <a href="#" className="checklist_task--remove" />
             </li>
         ));
