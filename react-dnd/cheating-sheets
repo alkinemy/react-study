@@ -1,0 +1,1 @@
+npm install --save react-dnd@2.x.x react-dnd-html5-backend@1.x.x
