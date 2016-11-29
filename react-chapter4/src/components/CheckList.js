@@ -21,4 +21,10 @@ class CheckList extends React.Component {
     }
 }
 
+CheckList.propTypes = {
+    cardId: React.PropTypes.number,
+    tasks: React.PropTypes.arrayOf(React.PropTypes.object)
+};
+
+
 export default CheckList;

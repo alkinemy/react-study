@@ -51,4 +51,13 @@ class Card extends React.Component {
     }
 }
 
+Card.propTypes = {
+    id: React.PropTypes.number,
+    title: React.PropTypes.string,
+    description: React.PropTypes.string,
+    color: React.PropTypes.string,
+    tasks: React.PropTypes.arrayOf(React.PropTypes.object)
+};
+
+
 export default Card;

@@ -23,4 +23,10 @@ class List extends React.Component {
     }
 }
 
+List.propTypes = {
+    title: React.PropTypes.string.isRequired,
+    cards: React.PropTypes.arrayOf(React.PropTypes.object)
+};
+
+
 export default List;
